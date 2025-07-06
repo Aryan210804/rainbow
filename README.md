@@ -28,10 +28,27 @@ Custom background color
 1. Install Python
 Ensure you have Python 3 installed. Turtle is included by default.
 
-2. Copy the Code Below into a turtle.py File
+2. Copy the Code Below into a .py File
+import turtle
 
+t = turtle.Turtle()
+turtle.bgcolor('#91C8E4')  # Soft blue background
+
+color = ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']
+t.speed(0)  # Fastest drawing speed
+
+for i in range(55555):
+    t.pencolor(color[i % len(color)]) 
+    t.width(i / 1000 + 20)            
+    t.forward(i)                      
+    t.right(51)                      
+
+turtle.done()
 3. Run the File
 Execute the file using: python filename.py
+
+Output of the code :
+![Rainbow Spiral Output](spiral.png)
 
 🎨 Customization Ideas
 Change t.right(51) to other angles for different spiral effects.
